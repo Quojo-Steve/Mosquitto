@@ -1,5 +1,6 @@
 import paho.mqtt.client as mqtt
 
+
 # name =  input("Please enter your name ")
 # school = input("Please enter your school ")
 # topic = input("Please enter the topic you want to connect to ")
@@ -18,6 +19,6 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("2.tcp.eu.ngrok.io", 17913, 60)
+client.connect("localhost", 1883, 60)
 
 client.loop_forever()
