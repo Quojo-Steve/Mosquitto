@@ -398,3 +398,25 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+.error {
+  background: rgb(77, 19, 19);
+  color: rgb(218, 17, 17);
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.sucess{
+  background: rgb(129, 233, 60);
+  color: rgb(3, 150, 10);
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}

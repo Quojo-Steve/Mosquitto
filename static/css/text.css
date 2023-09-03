@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+.container{
+    display: flex;
+    background: rgb(44, 41, 41);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    padding: 8px;
+    background: rgb(20, 20, 20);
+    position: relative;
+    transition-duration: 300ms;
+    border-right: 2px solid dodgerblue;
+}
+
+.open img{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 5px;
+    right: -20px;
+    top: 20px;
+    width: 40px;
+    padding: 5px;
+    background: rgb(44, 41, 41);
+    border: 2px solid dodgerblue;
+    height: 40px;
+}
+
+.title{
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title img{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-left: 8px;
+}
+
+.title h1{
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.rooms{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+}
+
+.room{
+    display: flex;
+    background: rgb(44, 41, 41);
+    align-items: center;
+    justify-content: center;
+    color: dodgerblue;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.message{
+    padding: 16px;
+    padding-top: 0px;
+    line-height: 1.5rem;
+    flex: 1 1 0%;
+    flex-direction: column-reverse;
+    height: 100vh;
+    /* overflow-y: scroll; */
+}
+
+.topic{
+    margin-top: 5px;
+    height: 10vh;
+    background: rgb(20, 20, 20);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    color: dodgerblue;
+    font-weight: 600;
+}
+
+.topic span{
+    margin-right: 5px;
+}
+
+.messages{
+    height: 77vh;
+    /* display: flex; */
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.messages::-webkit-scrollbar{
+    width: 0.5rem;
+}
+.messages::-webkit-scrollbar-track{
+    background: transparent;
+}
+.messages::-webkit-scrollbar-thumb{
+    background: rgba(0, 139, 139, 0.712);
+}
+
+.input{
+    height: 10vh;
+    background: rgb(20, 20, 20);
+}
+
+.input form{
+    display: grid;
+    grid-template-columns: 78% 20%;
+    gap: 10px;
+    padding: 10px;
+    height:100%;
+}
+
+.mess{
+    height: 100%;
+    background: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 1px solid dodgerblue;
+    color: white;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.send{
+    border-radius: 5px;
+    background: dodgerblue;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.incomming{
+    max-width: 500px;
+    width: fit-content;
+    height: max-content;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom-left-radius: 0px;
+    background: dodgerblue;
+}
+
+.sending{
+    display: flex;
+    vertical-align: bottom;
+    align-items: center;
+    justify-content: flex-end;
+    height: max-content;
+    margin-top: 0.5rem;
+    margin-left: 15rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.sending p{
+    background: rgba(209, 203, 203, 0.733);
+    color: white;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0px;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

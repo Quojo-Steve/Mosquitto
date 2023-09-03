@@ -24,7 +24,7 @@ def login():
         result = conn.execute(query, (username,password,))
         user_data = result.fetchone()
         if user_data:
-            return {"message": "User found!"}
+            return redirect('/message')
         else:
             return {"message": "User not found!"}
     except Exception as e:
@@ -54,9 +54,15 @@ def signup():
                 ''', (username, password, email))
         con.commit()
         con.close()
-        return redirect('/')
+        message = "Successfully created account"
+        return render_template('index.html',message=message)
     except sqlite3.Error as e:
         return str(e)
+
+@app.route('/message')
+def message():
+    return render_template('text.html')
+
 
 
 if __name__ == '__main__':
